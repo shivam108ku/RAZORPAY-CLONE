@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:(255, 255, 255, 0.25 );
+}
+
+.card{
+    position: relative;
+    width: 508px;
+    height: 314px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.card .card1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur( 4px );
+    border: 0.001px solid rgba( 255, 255, 255, 0.18 );
+  
+}
+ 
+.card .card1.front::before{
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background: #cf4848;
+    border-radius:50% ;
+    opacity: 0.5;
+}
+.card .card1.front::after{
+    content: "";
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+    width: 60px;
+    height: 60px;
+    background: #f6ff00;
+    border-radius:50% ;
+    opacity: 0.5;
+    
+}
+.card .card1.front .debit{
+    position: relative;
+    right: -10%;
+    top: 30px;
+    color: #e5ff00;
+    font-weight: 500;
+}
+.card .card1.front .bank{
+    position: absolute;
+    right: 40px;
+    top: 25px;
+    color: #ff5100;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 24px;
+}
+.card .card1.front .chip{
+    position:absolute;
+    top: 80px;
+    left: 50px;
+    max-width: 64px;
+}
+.card .card1.front .number{
+    position: absolute;
+    bottom: 130px;
+    left: 40px;
+    color: #05d9ff;
+    font-weight: 500;
+    letter-spacing: 6px;
+    font-size: 18px;
+    text-shadow: 0 2px 1px #0005;
+    font-family: 'Courier New', Courier, monospace;
+}
+.card .card1.front .validdate{
+    position: absolute;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6bff61;
+    font-weight: 300;
+    line-height: 1em;
+    text-align: right;
+    bottom: 90px;
+}
+.card .card1.front .validdate span:last-child{
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+.card .card1.front .name{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #ff7307;
+    font-weight: 300;
+    font-size: 16px;
+    font-family: cursive;
+    letter-spacing: 2px;
+}
+.card{
+    bottom: 100px;
+    left: 50%;
+}
+
+.bottom{
+    bottom: 50px;
+}
+
+ 
+
+ 
